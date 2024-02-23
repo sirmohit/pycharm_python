@@ -1,17 +1,20 @@
-# This is a sample Python script.
+from abstract_demo import Vehicle
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
+# Python does not support abstraction directly but we can achieve it by using "abc" module import the ABC Class of python.
+class Bike(Vehicle):
+    def __init__(self,n,color):
+        self.no_of_tyres = n
+        self.color = color
+    def start(self):
+        print("start with kick")
+class Scooty(Vehicle):
+    def __init__(self,n):
+        self.no_of_tyres =n
+    def start(self,n):
+        print("self start")
+class Car(Vehicle):
+    def __init__(self,n,x):
+        self.no_of_tyres = n
+        self.no_of_gears = 6
+    def start(self):
+        print("start with key")
